@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/xian-network/xian-node/actions/workflows/main.yml/badge.svg)](https://github.com/xian-network/xian-node/actions/workflows/main.yml)
 
-Python-based ABCI (Application Blockchain Interface) server designed for CometBFT 0.38.12. This component serves as the core application layer for the Xian blockchain network.
+Python-based ABCI (Application Blockchain Interface) server designed for CometBFT 0.38. This component serves as the core application layer for the Xian blockchain network.
 
 ## Requirements
 
