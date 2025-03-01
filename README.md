@@ -26,26 +26,26 @@ source venv/bin/activate
 pip install xian-node
 
 # Initialize the node
-xian init
+xian-node init
 
 # Start the node (standard mode)
-xian up
+xian-node up
 
 # Start the node with Blockchain Data Service (BDS)
-xian up --bds
+xian-node up --bds
 
 # View logs
-xian logs
+xian-node logs
 
 # Stop the node
-xian down
+xian-node down
 ```
 
 Additional commands:
 ```bash
-xian node-id  # Get node ID
-xian wipe     # Wipe blockchain data
-xian help     # Show all available commands
+xian-node node-id  # Get node ID
+xian-node wipe     # Wipe blockchain data
+xian-node help     # Show all available commands
 ```
 
 ### Method 2: Development Installation (from source)
@@ -109,7 +109,7 @@ The Blockchain Data Service provides additional data storage and querying capabi
 To start the node with the Blockchain Data Service enabled, use:
 ```bash
 # In PyPI installation
-xian up --bds
+xian-node up --bds
 
 # In development mode
 make up-bds
