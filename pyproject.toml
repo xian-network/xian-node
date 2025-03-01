@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "xian-core"
+name = "xian-node"
 version = "1.0.0"
 description = "Xian Network Python ABCI Server for CometBFT"
 authors = ["Xian Network <info@xian.org>"]
@@ -28,7 +28,7 @@ include = [
 ]
 
 [tool.poetry.scripts]
-xian = "xian.cli:main"
+xian-node = "xian.cli:main"
 
 [tool.poetry.dependencies]
 python = "3.11.11"
