@@ -14,7 +14,7 @@ jobs:
 
     services:
       postgres:
-        image: postgres:13
+        image: postgres:latest
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: 1234
@@ -31,10 +31,10 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Set up Python 3.11.8
+    - name: Set up Python 3.11.11
       uses: actions/setup-python@v4
       with:
-        python-version: '3.11.8'
+        python-version: '3.11.11'
 
     - name: Install system dependencies
       run: sudo apt-get update && sudo apt-get install -y pkg-config libhdf5-dev build-essential
