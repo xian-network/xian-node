@@ -6,8 +6,8 @@ Python-based ABCI (Application Blockchain Interface) server designed for CometBF
 
 ## Requirements
 
-- Python 3.11 (other versions are not supported)
-- CometBFT 0.38.12
+- Python 3.11.11 (other versions are not supported)
+- CometBFT 0.38
 - PostgreSQL (for Blockchain Data Service)
 - PM2 (for process management)
 
