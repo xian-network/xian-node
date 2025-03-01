@@ -34,10 +34,10 @@ if [ "$1" != "patch" ] && [ "$1" != "minor" ] && [ "$1" != "major" ]; then
     exit 1
 fi
 
-# Make sure we're on the master branch
+# Make sure we're on the main branch
 BRANCH=$(git branch --show-current)
-if [ "$BRANCH" != "master" ]; then
-    print_error "Please switch to the master branch before creating a release"
+if [ "$BRANCH" != "main" ]; then
+    print_error "Please switch to the main branch before creating a release"
     exit 1
 fi
 
@@ -62,8 +62,8 @@ else
 fi
 
 # Pull latest changes
-print_status "Pulling latest changes from master..."
-git pull origin master
+print_status "Pulling latest changes from main..."
+git pull origin main
 
 # Show what the new version will be and ask for confirmation
 CURRENT_VERSION=$(poetry version -s)
