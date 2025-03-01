@@ -1,6 +1,6 @@
 # Xian Core
 
-[![CI](https://github.com/xian-network/xian-core/actions/workflows/main.yml/badge.svg)](https://github.com/xian-network/xian-core/actions/workflows/main.yml)
+[![CI](https://github.com/xian-network/xian-node/actions/workflows/main.yml/badge.svg)](https://github.com/xian-network/xian-node/actions/workflows/main.yml)
 
 Python-based ABCI (Application Blockchain Interface) server designed for CometBFT 0.38.12. This component serves as the core application layer for the Xian blockchain network.
 
@@ -23,7 +23,7 @@ python -m venv venv
 source venv/bin/activate
 
 # Install the package
-pip install xian-core
+pip install xian-node
 
 # Initialize the node
 xian init
@@ -52,13 +52,13 @@ xian help     # Show all available commands
 
 ```bash
 # Clone the repository
-git clone https://github.com/xian-network/xian-core.git
-cd xian-core
+git clone https://github.com/xian-network/xian-node.git
+cd xian-node
 
 # Create and activate a virtual environment
 python3.11 -m venv xian-venv
 source xian-venv/bin/activate
-cd xian-core
+cd xian-node
 
 # Install in development mode
 pip install -e .
