@@ -13,7 +13,7 @@ Python-based ABCI (Application Blockchain Interface) server designed for CometBF
 
 ## Installation and Usage
 
-There are two ways to set up and run Xian Core:
+There are multiple ways to set up and run Xian Core:
 
 ### Method 1: Production Installation (via PyPI)
 
@@ -48,7 +48,27 @@ xian-node wipe     # Wipe blockchain data
 xian-node help     # Show all available commands
 ```
 
-### Method 2: Development Installation (from source)
+### Method 2: Installation with Poetry
+
+```bash
+# Clone the repository
+git clone https://github.com/xian-network/xian-node.git
+cd xian-node
+
+# Install dependencies with Poetry
+poetry install
+
+# Use Poetry to run commands
+poetry run xian-node init
+poetry run xian-node up
+
+# Or activate the Poetry virtual environment and run directly
+poetry shell
+xian-node init
+xian-node up
+```
+
+### Method 3: Development Installation (from source)
 
 ```bash
 # Clone the repository
@@ -164,3 +184,7 @@ This project is licensed under the Apache License Version 2.0 - see the [LICENSE
 
 - [xian-contracting](https://github.com/xian-network/xian-contracting): Smart contract engine
 - [xian-stack](https://github.com/xian-network/xian-stack): Complete blockchain stack deployment
+
+## Repository Stats
+
+![Alt](https://repobeats.axiom.co/api/embed/24d5a438ef0cf14c5f02c7286d04f83148bb192f.svg "Repobeats analytics image")
