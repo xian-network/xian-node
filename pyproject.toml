@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "xian-core"
-version = "1.0.4"
+version = "1.0.0"
 description = "Xian Network Python ABCI Server for CometBFT"
 authors = ["Xian Network <info@xian.org>"]
 readme = "README.md"
@@ -31,7 +31,7 @@ include = [
 xian = "xian.cli:main"
 
 [tool.poetry.dependencies]
-python = "~=3.11.0"
+python = "3.11.11"
 protobuf = "3.20.3"
 colorlog = ">=3.1.4"
 certifi = ">=2022.12.7"
