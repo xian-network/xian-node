@@ -156,17 +156,6 @@ curl "http://localhost:26657/abci_query?path=\"/get_next_nonce/ADDRESS\""
 python -m pytest tests/
 ```
 
-### Creating a Release
-```bash
-# Install required tools
-pip install poetry
-
-# Create a new release
-./release.sh patch  # For bug fixes (0.1.0 -> 0.1.1)
-./release.sh minor  # For new features (0.1.0 -> 0.2.0)
-./release.sh major  # For breaking changes (0.1.0 -> 2.0.0)
-```
-
 ## License
 
 This project is licensed under the Apache License Version 2.0 - see the [LICENSE](LICENSE) file for details.
