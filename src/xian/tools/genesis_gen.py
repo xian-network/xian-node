@@ -13,7 +13,7 @@ import re
 """
 Generate genesis_block.json file for CometBFT genesis.json
 Usage : 
-    Run from an environment where xian-contracting & xian-core are installed.
+    Run from an environment where xian-node is installed.
     Xian state must be blank. You may wish to temporarily rename .cometbft and call `make init` before hand to achieve this.
     `python genesis_gen.py --founder-privkey "your_founder_private_key" --output-path "path_to_output_file" --genesis-to-update "path_to_existing_genesis_file" --network "devnet|stagenet|etc"`
 """

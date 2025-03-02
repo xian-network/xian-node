@@ -138,4 +138,4 @@ rm $RELEASE_NOTES
 
 print_status "Release process initiated!"
 print_status "Version $NEW_VERSION will be published to PyPI and GitHub releases automatically."
-print_status "You can monitor the progress at: https://github.com/xian-network/xian-core/actions"
+print_status "You can monitor the progress at: https://github.com/xian-network/xian-node/actions"
