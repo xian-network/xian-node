@@ -1,13 +1,13 @@
 [tool.poetry]
 name = "xian-node"
-version = "1.0.0"
+version = "1.0.1"
 description = "Xian Network Python ABCI Server for CometBFT"
 authors = ["Xian Network <info@xian.org>"]
 readme = "README.md"
 license = "Apache-2.0"
-homepage = "https://github.com/XianChain/xian"
-repository = "https://github.com/XianChain/xian"
-documentation = "https://github.com/XianChain/xian"
+homepage = "https://xian.org"
+repository = "https://github.com/xian-network/xian-node"
+documentation = "https://docs.xian.org"
 keywords = ["blockchain", "xian", "cometbft", "abci", "python"]
 classifiers = [
     "Development Status :: 3 - Alpha",
