@@ -1,9 +1,7 @@
-import os
 import unittest
-from io import BytesIO
 import logging
-import asyncio
 
+from io import BytesIO
 from xian.xian_abci import Xian
 from abci.server import ProtocolHandler
 from abci.utils import read_messages

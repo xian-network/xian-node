@@ -1,9 +1,7 @@
-import os
-import asyncio
 import unittest
-from io import BytesIO
 import logging
 
+from io import BytesIO
 from xian.xian_abci import Xian
 from abci.server import ProtocolHandler
 from abci.utils import read_messages
@@ -26,10 +24,7 @@ from cometbft.abci.v1beta1.types_pb2 import (
     ResponseQuery,
     RequestFlush,
     ResponseFlush,
-    RequestEcho,
-    ResponseEcho,
     RequestCheckTx,
-    ValidatorUpdate,
     RequestCommit,
 )
 from cometbft.abci.v1beta2.types_pb2 import (
@@ -37,11 +32,9 @@ from cometbft.abci.v1beta2.types_pb2 import (
     ResponseProcessProposal,
     RequestInfo,
 )
-from cometbft.types.v1.params_pb2 import ConsensusParams
-from cometbft.crypto.v1.keys_pb2 import PublicKey
-
 from fixtures.mock_constants import MockConstants
 from utils import setup_fixtures, teardown_fixtures
+
 
 # Disable any kind of logging
 logging.disable(logging.CRITICAL)

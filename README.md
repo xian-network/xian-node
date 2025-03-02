@@ -1,4 +1,4 @@
-# Xian Core
+# Xian Node
 
 [![CI](https://github.com/xian-network/xian-node/actions/workflows/main.yml/badge.svg)](https://github.com/xian-network/xian-node/actions/workflows/main.yml)
 

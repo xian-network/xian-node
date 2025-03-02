@@ -1,8 +1,7 @@
-import os
 import unittest
-from io import BytesIO
 import logging
 
+from io import BytesIO
 from xian.constants import Constants
 from xian.xian_abci import Xian
 from abci.server import ProtocolHandler
@@ -15,9 +14,7 @@ from cometbft.abci.v1beta3.types_pb2 import (
 )
 from cometbft.abci.v1beta1.types_pb2 import (
     RequestQuery,
-    ResponseQuery,
 )
-import json
 from utils import setup_fixtures, teardown_fixtures
 
 

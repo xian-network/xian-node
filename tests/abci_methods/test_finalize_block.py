@@ -1,23 +1,15 @@
-import os
 import unittest
-from io import BytesIO
 import logging
-import sys
-from pathlib import Path
 
+from io import BytesIO
 from fixtures.mock_constants import MockConstants
-import pytest
-import xian_py
-
 from xian.constants import Constants as c
 from xian.xian_abci import Xian
 from abci.server import ProtocolHandler
 from abci.utils import read_messages
-
 from cometbft.abci.v1beta3.types_pb2 import (
     Request,
     Response,
-    ResponseFinalizeBlock,
     RequestFinalizeBlock,
 )
 

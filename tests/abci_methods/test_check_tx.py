@@ -1,9 +1,7 @@
-import os
 import unittest
-from io import BytesIO
 import logging
-import asyncio
 
+from io import BytesIO
 from xian.constants import Constants as c
 from xian.xian_abci import Xian
 from abci.server import ProtocolHandler
@@ -12,7 +10,6 @@ from abci.utils import read_messages
 from cometbft.abci.v1beta3.types_pb2 import (
     Request,
     Response,
-    ResponseCheckTx,
 )
 
 from cometbft.abci.v1beta1.types_pb2 import (
