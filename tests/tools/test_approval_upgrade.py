@@ -1,7 +1,7 @@
 import json
-import os
-from pathlib import Path
 import pytest
+
+from pathlib import Path
 from xian.tools.genesis_upgrades.approvals_upgrade import (
     find_xsc001_tokens,
     migrate_approvals,

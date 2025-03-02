@@ -1,7 +1,6 @@
 import unittest
 from contracting.stdlib.bridge.time import Datetime
 from contracting.client import ContractingClient
-from contracting.storage.driver import Driver
 import datetime
 import os
 

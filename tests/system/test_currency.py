@@ -1,11 +1,11 @@
 import unittest
-from contracting.stdlib.bridge.time import Datetime
-from contracting.client import ContractingClient
-from contracting.storage.driver import Driver
-from contracting.stdlib.bridge.hashing import sha3
-from xian_py.wallet import Wallet
 import datetime
 import os
+
+from contracting.stdlib.bridge.time import Datetime
+from contracting.client import ContractingClient
+from contracting.stdlib.bridge.hashing import sha3
+from xian_py.wallet import Wallet
 class TestCurrencyContract(unittest.TestCase):
     def setUp(self):
 
