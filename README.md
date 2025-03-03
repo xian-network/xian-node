@@ -1,15 +1,16 @@
 # Xian Node
 
 [![CI](https://github.com/xian-network/xian-node/actions/workflows/main.yml/badge.svg)](https://github.com/xian-network/xian-node/actions/workflows/main.yml)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 Python-based ABCI (Application Blockchain Interface) server designed for CometBFT 0.38. This component serves as the core application layer for the Xian blockchain network.
 
 ## Requirements
 
-- Python 3.11.11 (other versions are not officially supported)
-- CometBFT 0.38 (specifically 0.38.x, not 0.37.x or 1.0.x)
-- PostgreSQL (for Blockchain Data Service)
-- PM2 (for process management)
+- [Python 3.11.11](https://www.python.org/downloads/release/python-31111) (other versions are not officially supported)
+- [CometBFT 0.38](https://docs.cometbft.com/v0.38) (specifically 0.38.x, not 0.37.x or 1.0.x)
+- [PostgreSQL](https://www.postgresql.org) (for Blockchain Data Service)
+- [PM2](https://pm2.keymetrics.io) (for process management)
 
 ## Dependencies Installation
 
@@ -39,7 +40,7 @@ python --version  # Should output Python 3.11.11
 
 ### Installing CometBFT 0.38
 
-Xian Node requires CometBFT 0.38.x specifically (not 0.37.x or 1.0.x). Follow these steps to install it:
+Xian Node requires [CometBFT 0.38.x](https://docs.cometbft.com/v0.38) specifically (not 0.37.x or 1.0.x). Follow these steps to install it:
 
 1. Download the appropriate binary for your platform from the [CometBFT releases page](https://github.com/cometbft/cometbft/releases)
    - Make sure to select a release with version 0.38.x (e.g., v0.38.0, v0.38.1, etc.)
@@ -109,7 +110,7 @@ xian-node help     # Show all available commands
 
 ### Method 2: Installation with Poetry
 
-[Poetry](https://python-poetry.org/) is a dependency management and packaging tool for Python. To install Poetry, follow the instructions at [https://python-poetry.org/docs/#installation](https://python-poetry.org/docs/#installation).
+[Poetry](https://python-poetry.org) is a dependency management and packaging tool for Python. To install Poetry, follow the instructions at [https://python-poetry.org/docs/#installation](https://python-poetry.org/docs/#installation).
 
 ```bash
 # Ensure pyenv is set to Python 3.11.11
