@@ -6,21 +6,80 @@ Python-based ABCI (Application Blockchain Interface) server designed for CometBF
 
 ## Requirements
 
-- Python 3.11.11 (other versions are not supported)
-- CometBFT 0.38
+- Python 3.11.11 (other versions are not officially supported)
+- CometBFT 0.38 (specifically 0.38.x, not 0.37.x or 1.0.x)
 - PostgreSQL (for Blockchain Data Service)
 - PM2 (for process management)
 
+## Dependencies Installation
+
+### Python Installation
+
+Xian Node requires Python 3.11.11 specifically. We recommend using [pyenv](https://github.com/pyenv/pyenv) to manage Python versions.
+
+### Installing pyenv
+
+- **macOS/Linux**: Follow the installation instructions at [https://github.com/pyenv/pyenv#installation](https://github.com/pyenv/pyenv#installation)
+- **Windows**: Use [pyenv-win](https://github.com/pyenv-win/pyenv-win#installation) with instructions at [https://github.com/pyenv-win/pyenv-win#installation](https://github.com/pyenv-win/pyenv-win#installation)
+
+### Installing Python 3.11.11 with pyenv
+
+Once pyenv is installed, you can install and set up Python 3.11.11:
+
+```bash
+# Install Python 3.11.11
+pyenv install 3.11.11
+
+# Set it as your global Python version (optional)
+pyenv global 3.11.11
+
+# Verify the installation
+python --version  # Should output Python 3.11.11
+```
+
+### Installing CometBFT 0.38
+
+Xian Node requires CometBFT 0.38.x specifically (not 0.37.x or 1.0.x). Follow these steps to install it:
+
+1. Download the appropriate binary for your platform from the [CometBFT releases page](https://github.com/cometbft/cometbft/releases)
+   - Make sure to select a release with version 0.38.x (e.g., v0.38.0, v0.38.1, etc.)
+
+2. For Linux/macOS:
+   ```bash
+   # Example for Linux amd64, adjust the version number and OS/arch as needed
+   wget https://github.com/cometbft/cometbft/releases/download/v0.38.0/cometbft_0.38.0_linux_amd64.tar.gz
+   
+   # Extract the tarball
+   tar -xzf cometbft_0.38.0_linux_amd64.tar.gz
+   
+   # Move the binary to your PATH
+   sudo mv cometbft /usr/local/bin/
+   
+   # Verify the installation
+   cometbft version  # Should output v0.38.x
+   ```
+
+3. For Windows:
+   - Download the appropriate Windows zip file
+   - Extract the contents
+   - Add the extracted directory to your PATH environment variable
+   - Verify installation by running `cometbft version` in Command Prompt or PowerShell
+   
+Remember, it's crucial to use CometBFT 0.38.x as other versions are not compatible with Xian Node.
+
 ## Installation and Usage
 
-There are multiple ways to set up and run Xian Core:
+There are multiple ways to set up and run Xian Node:
 
 ### Method 1: Production Installation (via PyPI)
 
 ```bash
+# Ensure you're using Python 3.11.11
+pyenv local 3.11.11
+
 # Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install the package
 pip install xian-node
@@ -50,10 +109,18 @@ xian-node help     # Show all available commands
 
 ### Method 2: Installation with Poetry
 
+[Poetry](https://python-poetry.org/) is a dependency management and packaging tool for Python. To install Poetry, follow the instructions at [https://python-poetry.org/docs/#installation](https://python-poetry.org/docs/#installation).
+
 ```bash
+# Ensure pyenv is set to Python 3.11.11
+pyenv local 3.11.11
+
 # Clone the repository
 git clone https://github.com/xian-network/xian-node.git
 cd xian-node
+
+# Configure Poetry to use Python 3.11.11
+poetry env use $(pyenv which python)
 
 # Install dependencies with Poetry
 poetry install
@@ -71,13 +138,16 @@ xian-node up
 ### Method 3: Development Installation (from source)
 
 ```bash
+# Ensure you're using Python 3.11.11
+pyenv local 3.11.11
+
 # Clone the repository
 git clone https://github.com/xian-network/xian-node.git
 cd xian-node
 
 # Create and activate a virtual environment
-python3.11 -m venv xian-venv
-source xian-venv/bin/activate
+python -m venv xian-venv
+source xian-venv/bin/activate  # On Windows: xian-venv\Scripts\activate
 cd xian-node
 
 # Install in development mode
@@ -135,16 +205,6 @@ xian-node up --bds
 make up-bds
 ```
 
-## Architecture Components
-
-- **ABCI Server**: Handles communication with CometBFT
-- **Transaction Processor**: Manages transaction execution and state updates
-- **Validator Handler**: Manages validator set changes
-- **Rewards Handler**: Processes transaction fees and rewards
-- **Nonce Manager**: Handles transaction ordering
-- **Event System**: Tracks and logs blockchain events
-- **Blockchain Data Service**: Provides advanced data storage and querying
-
 ## Configuration
 
 The node uses several configuration files:
@@ -182,8 +242,10 @@ This project is licensed under the Apache License Version 2.0 - see the [LICENSE
 
 ## Related Projects
 
-- [xian-contracting](https://github.com/xian-network/xian-contracting): Smart contract engine
-- [xian-stack](https://github.com/xian-network/xian-stack): Complete blockchain stack deployment
+- [xian-stack](https://github.com/xian-network/xian-stack): Complete blockchain stack deployment packaged as a Docker container
+- [xian-contracting](https://github.com/xian-network/xian-contracting): Smart contract engine used by xian-node
+- [xian-js](https://github.com/xian-network/xian-py): JavaScript SDK for xian-node
+- [xian-py](https://github.com/xian-network/xian-js): Python SDK for xian-node
 
 ## Repository Stats
 
